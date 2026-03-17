@@ -40,7 +40,7 @@ with st.sidebar:
         "top 7 articles about machine learning trends",
     ]
     for ex in examples:
-        if st.button(ex, use_container_width=True):
+        if st.button(ex, use_container_width=False):
             st.session_state["query_input"] = ex
 
 # ── Query input ───────────────────────────────────────────────────────────────
@@ -138,7 +138,7 @@ if run_btn and query:
             }
             for r in structured
         ])
-        st.dataframe(df, use_container_width=True)
+        st.dataframe(df, width='stretch')
 
     with tab_export:
         st.success(f"Files saved to `output/` folder")

@@ -47,7 +47,6 @@ def extract_text(html: str) -> str:
         include_comments=False,
         include_tables=True,
         no_fallback=False,
-        favour_precision=False,
         include_formatting=False,
     )
 
