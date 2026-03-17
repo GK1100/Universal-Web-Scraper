@@ -116,3 +116,40 @@ Results are saved to `output/` as both `.json` and `.csv` after every run.
 | `requests` | HTTP requests |
 | `nltk` | NLP utilities |
 | `sumy` | Text summarization |
+
+---
+
+## Deploy on Render
+
+**1. Push to GitHub**
+
+```bash
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/your-username/your-repo.git
+git push -u origin main
+```
+
+**2. Create a new Web Service on [Render](https://render.com)**
+
+- Connect your GitHub repo
+- Set **Environment** to `Docker`
+- Set **Dockerfile path** to `web-scraper/Dockerfile`
+- Set **Port** to `8501`
+
+**3. Deploy**
+
+Render will build the Docker image and deploy automatically. Your app will be live at `https://your-app.onrender.com`.
+
+> Note: Render's free tier spins down after inactivity. Use a paid plan for always-on scraping.
+
+### Local Docker test
+
+```bash
+cd web-scraper
+docker build -t ai-scraper .
+docker run -p 8501:8501 ai-scraper
+```
+
+Open `http://localhost:8501`.

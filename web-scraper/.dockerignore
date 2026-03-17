@@ -1,0 +1,13 @@
+output/
+__pycache__/
+*.py[cod]
+.env
+.venv
+venv/
+env/
+.git/
+.gitignore
+*.log
+playwright-report/
+test-results/
+README.md

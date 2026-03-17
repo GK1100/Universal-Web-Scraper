@@ -1,8 +1,9 @@
 playwright==1.42.0
-trafilatura==1.8.0
+trafilatura>=2.0.0
 requests==2.31.0
 beautifulsoup4==4.12.3
-lxml==5.1.0
+lxml>=4.9.4,<6
 ddgs
 sumy==0.11.0
 nltk==3.8.1
+streamlit>=1.55.0
